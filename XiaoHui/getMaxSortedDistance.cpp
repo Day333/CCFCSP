@@ -54,5 +54,6 @@ int getMaxSortedDistance(vector<int> vec){
 int main(){
     vector<int> v = {2,6,3,4,5,10,9};
     cout << getMaxSortedDistance(v) << endl;
+    
     return 0;
 }
