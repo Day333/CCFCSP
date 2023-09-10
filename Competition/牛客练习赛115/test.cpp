@@ -1,37 +1,14 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
-// 二分查找
-int binarySearch(int L, int R, int cnt) {
-    int l = L, r = R;
-    
-    while (l <= r) {
-        int mid = l + (r - l) / 2;
-        int curCnt = f(L, R, mid);
-        
-        if (curCnt < cnt) {
-            l = mid + 1;
-        } else if (curCnt > cnt) {
-            r = mid - 1;
-        } else {
-            return mid;
-        }
-    }
-    
-    return -1;
-}
-
 int main() {
-    int T;
-    cin >> T;
-    
-    while (T--) {
-        int L, R, cnt;
-        cin >> L >> R >> cnt;
-        
-        int result = binarySearch(L, R, cnt);
-        cout << result << endl;
-    }
-    
+    string str = "Hello, World!";
+    string slice = str.substr(0, 5);
+    string slice2 = str.substr(5, 6);
+    string slice3 = str.substr(7);
+    cout << slice << endl;   // 输出 "World"
+    cout << slice2 << endl;  // 输出 "Hello"
+    cout << slice3 << endl;  // 输出 "World!"
     return 0;
 }
